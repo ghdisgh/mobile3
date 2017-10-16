@@ -1,9 +1,11 @@
 package com.example.iyeonju.myapplication;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TabHost;
@@ -29,15 +31,13 @@ public class MainActivity extends AppCompatActivity
         tabHost.addTab(tab1);//1번탭 생성
         TabHost.TabSpec tab2 = tabHost.newTabSpec("B").setContent(R.id.tab2).setIndicator("BMI계산기");
         tabHost.addTab(tab2);//2번탭 생성
-        TabHost.TabSpec tab3 = tabHost.newTabSpec("C").setContent(R.id.tab3).setIndicator("면적 계산기");
+        TabHost.TabSpec tab3 = tabHost.newTabSpec("C").setContent(R.id.tab3).setIndicator("소개");
         tabHost.addTab(tab3);//3번탭 생성
 
         etheight = (EditText)findViewById(R.id.etheight);
         etweight = (EditText)findViewById(R.id.etweight);
-        etm = (EditText)findViewById(R.id.etmeter);
         bmires = (TextView)findViewById(R.id.tvbmires);
         pmres = (TextView)findViewById(R.id.tvmetres);
-
     }
 
     public void NextScreen1(View view){
@@ -83,29 +83,7 @@ public class MainActivity extends AppCompatActivity
             }
         }
     }
-    //면적 계산 버튼 리스너
-    public void pmlistener(View v)
-    {
-        if(etm.getText().toString().replace(" ","").equals(""))
-        {
-            Toast.makeText(getApplicationContext(), "값을 입력하세요", Toast.LENGTH_SHORT).show();
-            etm.requestFocus();
-        }
-        else
-        {
-            switch (v.getId())
-            {
-                case R.id.ptombutn:
-                    double ptom = Double.parseDouble(etm.getText().toString()) * 3.305785;
-                    pmres.setText(ptom + "제곱미터");
-                    break;
-                case R.id.mtopbtn:
-                    double mtop = Double.parseDouble(etm.getText().toString()) * 0.3025;
-                    pmres.setText(mtop + "평");
-                    break;
-            }
-        }
-    }
+
     public void checkemptybmi()
     {
         if(etheight.getText().toString().replace(" ","").equals(""))

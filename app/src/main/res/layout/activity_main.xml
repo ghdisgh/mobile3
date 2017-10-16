@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.iyeonju.myapplication.Main3Activity">
+    tools:context="com.example.iyeonju.myapplication.MainActivity">
 
     <TabHost
         android:id="@+id/tabhost1"
@@ -49,7 +49,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
                             android:text="로그인"
-                            android:textSize="30dp" />
+                            android:textSize="20dp" />
 
                         <TextView
                             android:id="@+id/textView2"
@@ -106,7 +106,7 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#ffe2a3"
+                    android:background="#f1f1f1"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -122,10 +122,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
-                            android:text="키와 몸무게를 입력하세요" />
+                            android:text="키와 몸무게를 입력하세요"
+                            android:textSize="20dp" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/textView"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
@@ -174,6 +175,7 @@
                             android:layout_height="wrap_content"
                             android:text="결과가 없습니다."
                             android:textSize="20dp" />
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -182,7 +184,7 @@
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#a6f297"
+                    android:background="#f1f1f1"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -198,59 +200,32 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="20dp"
-                            android:text="평이나 면적을 입력하세요"
+                            android:text="나의 소개"
                             android:textSize="20dp" />
 
                         <EditText
-                            android:id="@+id/etmeter"
+                            android:id="@+id/editText4"
                             android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:layout_marginBottom="20dp"
-                            android:background="#daffc0"
+                            android:layout_height="wrap_content"
                             android:ems="10"
-                            android:inputType="number" />
+                            android:inputType="textPersonName"
+                            android:text="이연주" />
 
-                        <LinearLayout
+                        <EditText
+                            android:id="@+id/editText6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="216230053" />
 
-                            <ImageView
-                                android:id="@+id/imageView"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@mipmap/ic_launcher" />
-
-                            <TextView
-                                android:id="@+id/tvmetres"
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_marginBottom="20dp"
-                                android:layout_weight="1"
-                                android:background="#d9ffc0"
-                                android:text="계산결과가 없습니다."
-                                android:textSize="20dp" />
-                        </LinearLayout>
-
-                        <Button
-                            android:id="@+id/ptombutn"
+                        <EditText
+                            android:id="@+id/editText8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="#86c65e"
-                            android:onClick="pmlistener"
-                            android:text="평을 제곱미터로 변환"
-                            android:textColor="#ffffff" />
-
-                        <Button
-                            android:id="@+id/mtopbtn"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:background="#5fce8f"
-                            android:onClick="pmlistener"
-                            android:text="제곱미터를 평으로 변환"
-                            android:textColor="#ffffff" />
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="B" />
 
                     </LinearLayout>
 
@@ -259,4 +234,5 @@
             </FrameLayout>
         </LinearLayout>
     </TabHost>
+
 </LinearLayout>
