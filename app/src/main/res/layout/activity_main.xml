@@ -1,238 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.iyeonju.myapplication.MainActivity">
+    tools:context="com.example.iyeonju.myapplication.MainActivity" >
 
-    <TabHost
-        android:id="@+id/tabhost1"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
+    </android.support.design.widget.AppBarLayout>
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    <include layout="@layout/activity_main2" />
 
-                <LinearLayout
-                    android:id="@+id/tab1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#f1f1f1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="30dp"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="20dp"
-                        android:weightSum="1">
-
-                        <TextView
-                            android:id="@+id/textView1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp"
-                            android:text="로그인"
-                            android:textSize="20dp" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text="Email"
-                            android:textSize="20dp" />
-
-                        <EditText
-                            android:id="@+id/editText"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="textEmailAddress" />
-
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text="PassWord"
-                            android:textSize="20dp" />
-
-                        <EditText
-                            android:id="@+id/editText2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="textPassword" />
-
-                        <Button
-                            android:id="@+id/newbutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="#66ff4081"
-                            android:onClick="NextScreen1"
-                            android:text="회원가입하기" />
-
-                        <Button
-                            android:id="@+id/loginbutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp"
-                            android:layout_weight="0.08"
-                            android:background="#ff4081"
-                            android:text="로그인하기"
-                            android:textColor="#ffffff" />
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#f1f1f1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="30dp"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp"
-                            android:text="키와 몸무게를 입력하세요"
-                            android:textSize="20dp" />
-
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text="키(cm)"
-                            android:textSize="20dp" />
-
-                        <EditText
-                            android:id="@+id/etheight"
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:layout_marginBottom="20dp"
-                            android:background="#fff4db"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <TextView
-                            android:id="@+id/textView5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text="체중(kg)"
-                            android:textSize="20dp" />
-
-                        <EditText
-                            android:id="@+id/etweight"
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:layout_marginBottom="20dp"
-                            android:background="#fff4db"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                        <Button
-                            android:id="@+id/bmibutton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp"
-                            android:background="#f1be84"
-                            android:onClick="bmilistener"
-                            android:text="BMI 계산 결과"
-                            android:textColor="#ffffff" />
-
-                        <TextView
-                            android:id="@+id/tvbmires"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="결과가 없습니다."
-                            android:textSize="20dp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#f1f1f1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="30dp"
-                        android:background="#ffffff"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp"
-                            android:text="나의 소개"
-                            android:textSize="20dp" />
-
-                        <EditText
-                            android:id="@+id/editText4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="textPersonName"
-                            android:text="이연주" />
-
-                        <EditText
-                            android:id="@+id/editText6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="textPersonName"
-                            android:text="216230053" />
-
-                        <EditText
-                            android:id="@+id/editText8"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:inputType="textPersonName"
-                            android:text="B" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
-
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

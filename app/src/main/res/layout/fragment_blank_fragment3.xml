@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.iyeonju.myapplication.Main3Activity">
+    tools:context="com.example.iyeonju.myapplication.BlankFragment3">
+
+    <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
         android:id="@+id/tab3"
@@ -56,16 +56,17 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
+
 
                 <ImageButton
                     android:id="@+id/imageButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="NextScreen1"
-                    app:srcCompat="@android:drawable/ic_menu_myplaces" />
+                    android:onClick="NextScreen3"
+                    android:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:id="@+id/tvmetres"
@@ -76,11 +77,11 @@
                     android:layout_weight="1"
                     android:background="#d9ffc0"
                     android:text="메인 화면으로 가려면 사진을 누르세요"
-                    android:textSize="15dp" />
+                    android:textSize="13dp" />
+
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
+</FrameLayout>
